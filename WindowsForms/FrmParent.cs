@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsForms
 {
-    public partial class Form1 : Form
+    public partial class FrmParent : Form
     {
-        public Form1()
+        public FrmParent()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-            this.reportViewer1.RefreshReport();
-            this.reportViewer2.RefreshReport();
-            this.reportViewer3.RefreshReport();
         }
     }
 }
