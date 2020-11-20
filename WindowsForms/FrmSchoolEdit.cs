@@ -19,16 +19,16 @@ namespace WindowsForms
         public FrmSchoolEdit()
         {
             InitializeComponent();
-            schoolBLO = new SchoolBLO(ConfigurationManager.AppSettings["DbFolder"]);
-            oldSchool = SchoolBLO.GetSchool();
-            if (oldSchool != null)
-            {
-                txtNom.Text = oldSchool.Nom;
-                txtEmail.Text = oldSchool.Email;
-                txtTel.Text = oldSchool.Tel.ToString();
-                txtContact.Text = oldSchool.Contact;
-                pictureBox1.ImageLocation = oldSchool.Logo;
-            }
+            //schoolBLO = new SchoolBLO(ConfigurationManager.AppSettings["DbFolder"]);
+            //oldSchool = SchoolBLO.GetSchool();
+            //if (oldSchool != null)
+            //{
+            //    txtNom.Text = oldSchool.Nom;
+            //    txtEmail.Text = oldSchool.Email;
+            //    txtTel.Text = oldSchool.Tel.ToString();
+            //    txtContact.Text = oldSchool.Contact;
+            //    pictureBox1.ImageLocation = oldSchool.Logo;
+            //}
         }
 
         private void FrmSchoolEdit_Load(object sender, EventArgs e)

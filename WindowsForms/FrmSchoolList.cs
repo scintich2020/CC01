@@ -19,9 +19,9 @@ namespace WindowsForms
         public FrmSchoolList()
         {
             InitializeComponent();
-            dataGridView1.AutoGenerateColumns = false;
-            studentBLO = new StudentBLO(ConfigurationManager.AppSettings["DbFolder"]);
-            schoolBLO = new SchoolBLO(ConfigurationManager.AppSettings["DbFolder"]);
+            //dataGridView1.AutoGenerateColumns = false;
+            //studentBLO = new StudentBLO(ConfigurationManager.AppSettings["DbFolder"]);
+            //schoolBLO = new SchoolBLO(ConfigurationManager.AppSettings["DbFolder"]);
         }
 
         private void loadData()
@@ -40,8 +40,8 @@ namespace WindowsForms
         }
         private void btnNew_Click(object sender, EventArgs e)
         {
-            Form f = new FrmSchoolEdit(loadData);
-            f.Show();
+            //Form f = new FrmSchoolEdit(loadData);
+            //f.Show();
         }
 
         private void FrmSchoolList_Load(object sender, EventArgs e)
@@ -61,18 +61,18 @@ namespace WindowsForms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
-                {
-                    Form f = new FrmSchoolEdit
-                    (
-                        dataGridView1.SelectedRows[i].DataBoundItem as School,
-                        loadData
-                    );
-                    f.ShowDialog();
-                }
-            }
+            //if (dataGridView1.SelectedRows.Count > 0)
+            //{
+            //    for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+            //    {
+            //        Form f = new FrmSchoolEdit
+            //        (
+            //            dataGridView1.SelectedRows[i].DataBoundItem as School,
+            //            loadData
+            //        );
+            //        f.ShowDialog();
+            //    }
+            //}
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

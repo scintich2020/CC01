@@ -1,6 +1,9 @@
-﻿using System;
+﻿using CC01.BLL;
+using CC01.BO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -12,15 +15,18 @@ namespace WindowsForms
 {
     public partial class FrmStudentList : Form
     {
+        private StudentBLO studentBLO;
         public FrmStudentList()
         {
             InitializeComponent();
+            dataGridView1.AutoGenerateColumns = false;
+            studentBLO = new StudentBLO(ConfigurationManager.AppSettings["DbFolder"]);
         }
 
         private void loadData()
         {
             string value = txtSearch.Text.ToLower();
-            var students = students.GetBy
+            var students = studentBLO.GetBy
             (
                 x =>
                 x.Matricule.ToLower().Contains(value) ||
@@ -44,7 +50,7 @@ namespace WindowsForms
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            Form f = new FrmStudentList(loadData);
+            Form f = new FrmStudentEdit(loadData);
             f.Show();
         }
 
@@ -71,7 +77,7 @@ namespace WindowsForms
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            List<FrmStudentList> items = new List<FrmStudentList>();
+            List<StudentPrintList> items = new List<StudentPrintList>();
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 Student s = dataGridView1.Rows[i].DataBoundItem as Student;
@@ -79,13 +85,14 @@ namespace WindowsForms
                 (
                    new StudentPrintList
                    (
-                       s.Reference,
-                       s.Name,
-                       s.UnitPrice,
-                       s.Picture
-
+                      s.Matricule,
+                      s.Nom,
+                      s.Prenom,
+                      s.Email,
+                      s.Contact,
+                      s.Photo
                     )
-                );
+                ) ;
             }
         }
 
@@ -108,11 +115,16 @@ namespace WindowsForms
                 {
                     for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
                     {
-                        studentBLO.DeleteProduct(dataGridView1.SelectedRows[i].DataBoundItem as Student);
+                        studentBLO.DeleteStudent(dataGridView1.SelectedRows[i].DataBoundItem as Student);
                     }
                     loadData();
                 }
             }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEdit_Click(sender, e);
         }
     }
 

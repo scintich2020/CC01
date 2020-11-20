@@ -121,7 +121,7 @@ namespace WindowsForms
                    "Not found error",
                    MessageBoxButtons.OK,
                    MessageBoxIcon.Warning
-               );
+               );            
             }
             catch (Exception ex)
             {
@@ -176,5 +176,94 @@ namespace WindowsForms
         {
             pictureBox1.ImageLocation = null;
         }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+
+            //try
+            //{
+            //    checkForm();
+
+            //    Student newProduct = new Student
+            //    (
+            //        txtMatricule.Text.ToUpper(),
+            //        txtNom.Text,
+            //        double.Parse(txtPrice.Text),
+            //        float.Parse(txtTax.Text),
+            //        !string.IsNullOrEmpty(pictureBox1.ImageLocation) ? File.ReadAllBytes(pictureBox1.ImageLocation) : this.oldProduct?.Picture
+            //    );
+
+            //    ProductBLO productBLO = new ProductBLO(ConfigurationManager.AppSettings["DbFolder"]);
+
+            //    if (this.oldProduct == null)
+            //        productBLO.CreateProduct(newProduct);
+            //    else
+            //        productBLO.EditProduct(oldProduct, newProduct);
+
+            //    MessageBox.Show
+            //    (
+            //        "Save done !",
+            //        "Confirmation",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Information
+            //    );
+
+            //    if (callBack != null)
+            //        callBack();
+
+            //    if (oldProduct != null)
+            //        Close();
+
+            //    txtReference.Clear();
+            //    txtName.Clear();
+            //    txtPrice.Clear();
+            //    txtTax.Clear();
+            //    txtReference.Focus();
+
+            //}
+            //catch (TypingException ex)
+            //{
+            //    MessageBox.Show
+            //   (
+            //       ex.Message,
+            //       "Typing error",
+            //       MessageBoxButtons.OK,
+            //       MessageBoxIcon.Warning
+            //   );
+            //}
+            //catch (DuplicateNameException ex)
+            //{
+            //    MessageBox.Show
+            //   (
+            //       ex.Message,
+            //       "Duplicate error",
+            //       MessageBoxButtons.OK,
+            //       MessageBoxIcon.Warning
+            //   );
+            //}
+            //catch (KeyNotFoundException ex)
+            //{
+            //    MessageBox.Show
+            //   (
+            //       ex.Message,
+            //       "Not found error",
+            //       MessageBoxButtons.OK,
+            //       MessageBoxIcon.Warning
+            //   );
+            //}
+            //catch (Exception ex)
+            //{
+            //    ex.WriteToFile();
+            //    MessageBox.Show
+            //   (
+            //       "An error occurred! Please try again later.",
+            //       "Erreur",
+            //       MessageBoxButtons.OK,
+            //       MessageBoxIcon.Error
+            //   );
+            //}
+        }
+
     }
 }
+

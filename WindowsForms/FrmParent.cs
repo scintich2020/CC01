@@ -16,5 +16,19 @@ namespace WindowsForms
         {
             InitializeComponent();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            FrmStudentList form = new FrmStudentList();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            FrmSchoolList form = new FrmSchoolList();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

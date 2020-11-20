@@ -71,7 +71,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(580, 49);
+            this.linkLabel1.Location = new System.Drawing.Point(580, 46);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(14, 13);
             this.linkLabel1.TabIndex = 56;
@@ -98,6 +98,7 @@
             this.btnSave.TabIndex = 54;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // lblPhoto
             // 
@@ -111,6 +112,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(376, 65);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(218, 176);
@@ -228,8 +230,10 @@
             // 
             // FrmStudentEdit
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(684, 450);
             this.Controls.Add(this.txtContact);
             this.Controls.Add(this.lblContact);

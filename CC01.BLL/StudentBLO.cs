@@ -34,7 +34,7 @@ namespace CC01.BLL
 
         public IEnumerable<Student> GetByMatricule(string matricule)
         {
-            return studentRepo.Find(x => x.matricule == matricule);
+            return studentRepo.Find(x => x.Matricule == matricule);
         }
 
         public IEnumerable<Student> GetBy(Func<Student, bool> predicate)
