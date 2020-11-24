@@ -39,6 +39,7 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(753, 461);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // FrmPreview
             // 
@@ -47,7 +48,9 @@
             this.ClientSize = new System.Drawing.Size(753, 461);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FrmPreview";
-            this.Text = "FrmPreview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Preview";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPreview_Load);
             this.ResumeLayout(false);
 

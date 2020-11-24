@@ -36,7 +36,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.lblCount = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Picture = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Picture = new System.Windows.Forms.DataGridViewImageColumn();
             this.Matricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -134,13 +134,17 @@
             this.Contact});
             this.dataGridView1.Location = new System.Drawing.Point(12, 75);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 200;
             this.dataGridView1.Size = new System.Drawing.Size(512, 312);
             this.dataGridView1.TabIndex = 25;
             // 
             // Picture
             // 
             this.Picture.HeaderText = "Picture";
+            this.Picture.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Picture.Name = "Picture";
+            this.Picture.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Picture.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Matricule
             // 
@@ -209,7 +213,7 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Picture;
+        private System.Windows.Forms.DataGridViewImageColumn Picture;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricule;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prenom;

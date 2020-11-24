@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.lblContact = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -47,6 +48,7 @@
             this.lblLieu = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,6 +121,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(218, 176);
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Click to browser");
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtMatricule
@@ -229,6 +232,10 @@
             this.lblEmail.TabIndex = 40;
             this.lblEmail.Text = "Email";
             // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            // 
             // FrmStudentEdit
             // 
             this.AcceptButton = this.btnSave;
@@ -285,5 +292,6 @@
         private System.Windows.Forms.Label lblLieu;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

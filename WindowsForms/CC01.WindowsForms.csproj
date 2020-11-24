@@ -79,9 +79,11 @@
     </Compile>
     <Compile Include="FrmPreview.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="FrmPreview.Designer.cs">
       <DependentUpon>FrmPreview.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="FrmSchoolEdit.cs">
       <SubType>Form</SubType>
@@ -110,6 +112,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPreview.resx">
       <DependentUpon>FrmPreview.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSchoolEdit.resx">
       <DependentUpon>FrmSchoolEdit.cs</DependentUpon>
@@ -134,6 +137,7 @@
     </Compile>
     <EmbeddedResource Include="StudentListRpt.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\StudentPrintList.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
