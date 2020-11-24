@@ -57,5 +57,15 @@ namespace CC01.BLL
         {
             throw new NotImplementedException();
         }
+
+        public void CreateSchool(School newSchool)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void EditSchool(School oldSchool, School newSchool)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

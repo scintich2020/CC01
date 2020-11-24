@@ -36,6 +36,10 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
             this.lblCount = new System.Windows.Forms.Label();
+            this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,9 +68,14 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nom,
+            this.Email,
+            this.Tel,
+            this.Contact});
             this.dataGridView1.Location = new System.Drawing.Point(12, 72);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(491, 302);
+            this.dataGridView1.Size = new System.Drawing.Size(446, 302);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -86,7 +95,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(12, 37);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(491, 29);
+            this.txtSearch.Size = new System.Drawing.Size(446, 29);
             this.txtSearch.TabIndex = 9;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -109,6 +118,7 @@
             this.btnPrint.TabIndex = 16;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // lblCount
             // 
@@ -120,11 +130,31 @@
             this.lblCount.TabIndex = 17;
             this.lblCount.Text = "Count";
             // 
+            // Nom
+            // 
+            this.Nom.HeaderText = "Nom";
+            this.Nom.Name = "Nom";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // Tel
+            // 
+            this.Tel.HeaderText = "Tel";
+            this.Tel.Name = "Tel";
+            // 
+            // Contact
+            // 
+            this.Contact.HeaderText = "Contact";
+            this.Contact.Name = "Contact";
+            // 
             // FrmSchoolList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 461);
+            this.ClientSize = new System.Drawing.Size(678, 418);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnEdit);
@@ -152,5 +182,9 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
     }
 }

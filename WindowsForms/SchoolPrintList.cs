@@ -13,17 +13,14 @@ namespace WindowsForms
         public int Tel { get; set; }
         public string Contact { get; set; }
         public byte[] Photo { get; set; }
-        public string Logo { get; set; }
 
-        public SchoolPrintList(string nom, string email, int tel, string contact, byte[] photo, 
-            string logo)
+        public SchoolPrintList(string nom, string email, int tel, string contact, byte[] photo)
         {
             Nom = nom;
             Email = email;
             Tel = tel;
             Contact = contact;
             Photo = photo;
-            Logo = logo;
         }
     }
 }

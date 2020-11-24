@@ -46,5 +46,10 @@ namespace CC01.BLL
         {
             studentRepo.Set(oldStudent, newStudent);
         }
+
+        public void DeleteSchool(School school)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
