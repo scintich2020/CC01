@@ -16,5 +16,11 @@ namespace WindowsForms
         {
             InitializeComponent();
         }
+
+        private void FrmPreview_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

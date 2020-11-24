@@ -88,6 +88,7 @@
             this.btnCancel.TabIndex = 55;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
             // 
             // btnSave
             // 
@@ -256,6 +257,7 @@
             this.Controls.Add(this.lblEmail);
             this.Name = "FrmStudentEdit";
             this.Text = "Student Edit";
+            this.Load += new System.EventHandler(this.FrmStudentEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

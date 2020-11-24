@@ -31,7 +31,12 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnNew = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.lblCount = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Picture = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Matricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,10 +44,6 @@
             this.LieuNaissance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.lblCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,66 +76,6 @@
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Matricule,
-            this.Nom,
-            this.Prenom,
-            this.DateNaissance,
-            this.LieuNaissance,
-            this.Email,
-            this.Contact});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(512, 312);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // Matricule
-            // 
-            this.Matricule.DataPropertyName = "Matricule";
-            this.Matricule.HeaderText = "Matricule";
-            this.Matricule.Name = "Matricule";
-            // 
-            // Nom
-            // 
-            this.Nom.DataPropertyName = "Nom";
-            this.Nom.HeaderText = "Nom";
-            this.Nom.Name = "Nom";
-            // 
-            // Prenom
-            // 
-            this.Prenom.DataPropertyName = "Prenom";
-            this.Prenom.HeaderText = "Prenom";
-            this.Prenom.Name = "Prenom";
-            // 
-            // DateNaissance
-            // 
-            this.DateNaissance.DataPropertyName = "DateNaissance";
-            this.DateNaissance.HeaderText = "DateNaissance";
-            this.DateNaissance.Name = "DateNaissance";
-            // 
-            // LieuNaissance
-            // 
-            this.LieuNaissance.DataPropertyName = "LieuNaissance";
-            this.LieuNaissance.HeaderText = "LieuNaissance";
-            this.LieuNaissance.Name = "LieuNaissance";
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // Contact
-            // 
-            this.Contact.DataPropertyName = "Contact";
-            this.Contact.HeaderText = "Contact";
-            this.Contact.Name = "Contact";
             // 
             // btnDelete
             // 
@@ -179,16 +120,73 @@
             this.lblCount.TabIndex = 24;
             this.lblCount.Text = "Count";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Picture,
+            this.Matricule,
+            this.Nom,
+            this.Prenom,
+            this.DateNaissance,
+            this.LieuNaissance,
+            this.Email,
+            this.Contact});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 75);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(512, 312);
+            this.dataGridView1.TabIndex = 25;
+            // 
+            // Picture
+            // 
+            this.Picture.HeaderText = "Picture";
+            this.Picture.Name = "Picture";
+            // 
+            // Matricule
+            // 
+            this.Matricule.HeaderText = "Matricule";
+            this.Matricule.Name = "Matricule";
+            // 
+            // Nom
+            // 
+            this.Nom.HeaderText = "Nom";
+            this.Nom.Name = "Nom";
+            // 
+            // Prenom
+            // 
+            this.Prenom.HeaderText = "Prenom";
+            this.Prenom.Name = "Prenom";
+            // 
+            // DateNaissance
+            // 
+            this.DateNaissance.HeaderText = "DateNaissance";
+            this.DateNaissance.Name = "DateNaissance";
+            // 
+            // LieuNaissance
+            // 
+            this.LieuNaissance.HeaderText = "LieuNaissance";
+            this.LieuNaissance.Name = "LieuNaissance";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // Contact
+            // 
+            this.Contact.HeaderText = "Contact";
+            this.Contact.Name = "Contact";
+            // 
             // FrmStudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 432);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
@@ -206,10 +204,12 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Picture;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricule;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prenom;
@@ -217,7 +217,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LieuNaissance;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
-        private System.Windows.Forms.Label lblCount;
     }
 }
 

@@ -180,90 +180,104 @@ namespace WindowsForms
         private void btnSave_Click_1(object sender, EventArgs e)
         {
 
-            //try
-            //{
-            //    checkForm();
+            try
+            {
+                checkForm();
 
-            //    Student newProduct = new Student
-            //    (
-            //        txtMatricule.Text.ToUpper(),
-            //        txtNom.Text,
-            //        double.Parse(txtPrice.Text),
-            //        float.Parse(txtTax.Text),
-            //        !string.IsNullOrEmpty(pictureBox1.ImageLocation) ? File.ReadAllBytes(pictureBox1.ImageLocation) : this.oldProduct?.Picture
-            //    );
+                Student newStudent = new Student
+                (
+                    txtMatricule.Text.ToUpper(),
+                    txtNom.Text,
+                    txtPrenom.Text,
+                    DateTime.Parse(txtDateNaisssance.Text),
+                    txtLieu.Text,
+                    txtEmail.Text,
+                    txtContact.Text,
+                    !string.IsNullOrEmpty(pictureBox1.ImageLocation) ? File.ReadAllBytes(pictureBox1.ImageLocation) : this.oldStudent?.Photo
+                );
 
-            //    ProductBLO productBLO = new ProductBLO(ConfigurationManager.AppSettings["DbFolder"]);
+                StudentBLO studentBLO = new StudentBLO(ConfigurationManager.AppSettings["DbFolder"]);
 
-            //    if (this.oldProduct == null)
-            //        productBLO.CreateProduct(newProduct);
-            //    else
-            //        productBLO.EditProduct(oldProduct, newProduct);
+                if (this.oldStudent == null)
+                    studentBLO.CreateStudent(newStudent);
+                else
+                    studentBLO.EditStudent(oldStudent, newStudent);
 
-            //    MessageBox.Show
-            //    (
-            //        "Save done !",
-            //        "Confirmation",
-            //        MessageBoxButtons.OK,
-            //        MessageBoxIcon.Information
-            //    );
+                MessageBox.Show
+                (
+                    "Save done !",
+                    "Confirmation",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
 
-            //    if (callBack != null)
-            //        callBack();
+                if (callBack != null)
+                    callBack();
 
-            //    if (oldProduct != null)
-            //        Close();
+                if (oldStudent != null)
+                    Close();
 
-            //    txtReference.Clear();
-            //    txtName.Clear();
-            //    txtPrice.Clear();
-            //    txtTax.Clear();
-            //    txtReference.Focus();
+                txtMatricule.Clear();
+                txtNom.Clear();
+                txtPrenom.Clear();
+                txtDateNaisssance.Clear();
+                txtLieu.Clear();
+                txtEmail.Clear();
+                txtContact.Clear();
 
-            //}
-            //catch (TypingException ex)
-            //{
-            //    MessageBox.Show
-            //   (
-            //       ex.Message,
-            //       "Typing error",
-            //       MessageBoxButtons.OK,
-            //       MessageBoxIcon.Warning
-            //   );
-            //}
-            //catch (DuplicateNameException ex)
-            //{
-            //    MessageBox.Show
-            //   (
-            //       ex.Message,
-            //       "Duplicate error",
-            //       MessageBoxButtons.OK,
-            //       MessageBoxIcon.Warning
-            //   );
-            //}
-            //catch (KeyNotFoundException ex)
-            //{
-            //    MessageBox.Show
-            //   (
-            //       ex.Message,
-            //       "Not found error",
-            //       MessageBoxButtons.OK,
-            //       MessageBoxIcon.Warning
-            //   );
-            //}
-            //catch (Exception ex)
-            //{
-            //    ex.WriteToFile();
-            //    MessageBox.Show
-            //   (
-            //       "An error occurred! Please try again later.",
-            //       "Erreur",
-            //       MessageBoxButtons.OK,
-            //       MessageBoxIcon.Error
-            //   );
-            //}
+            }
+            catch (TypingException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Typing error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+            catch (DuplicateNameException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Duplicate error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+            catch (KeyNotFoundException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Not found error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+            catch (Exception ex)
+            {
+                ex.WriteToFile();
+                MessageBox.Show
+               (
+                   "An error occurred! Please try again later.",
+                   "Erreur",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error
+               );
+            }
         }
 
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FrmStudentEdit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

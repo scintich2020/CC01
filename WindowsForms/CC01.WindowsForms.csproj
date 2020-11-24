@@ -108,6 +108,9 @@
     <EmbeddedResource Include="FrmParent.resx">
       <DependentUpon>FrmParent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPreview.resx">
+      <DependentUpon>FrmPreview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSchoolEdit.resx">
       <DependentUpon>FrmSchoolEdit.cs</DependentUpon>
     </EmbeddedResource>
