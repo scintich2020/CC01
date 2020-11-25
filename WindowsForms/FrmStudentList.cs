@@ -128,6 +128,11 @@ namespace WindowsForms
         {
             btnEdit_Click(sender, e);
         }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }

@@ -137,6 +137,7 @@
             this.dataGridView1.RowTemplate.Height = 200;
             this.dataGridView1.Size = new System.Drawing.Size(512, 312);
             this.dataGridView1.TabIndex = 25;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // Picture
             // 
@@ -145,39 +146,47 @@
             this.Picture.Name = "Picture";
             this.Picture.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Picture.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Picture.Width = 50;
             // 
             // Matricule
             // 
+            this.Matricule.DataPropertyName = "Matricule";
             this.Matricule.HeaderText = "Matricule";
             this.Matricule.Name = "Matricule";
             // 
             // Nom
             // 
+            this.Nom.DataPropertyName = "Nom";
             this.Nom.HeaderText = "Nom";
             this.Nom.Name = "Nom";
             // 
             // Prenom
             // 
+            this.Prenom.DataPropertyName = "Prenom";
             this.Prenom.HeaderText = "Prenom";
             this.Prenom.Name = "Prenom";
             // 
             // DateNaissance
             // 
+            this.DateNaissance.DataPropertyName = "DateNaissance";
             this.DateNaissance.HeaderText = "DateNaissance";
             this.DateNaissance.Name = "DateNaissance";
             // 
             // LieuNaissance
             // 
+            this.LieuNaissance.DataPropertyName = "LieuNaissance";
             this.LieuNaissance.HeaderText = "LieuNaissance";
             this.LieuNaissance.Name = "LieuNaissance";
             // 
             // Email
             // 
+            this.Email.DataPropertyName = "Email";
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             // 
             // Contact
             // 
+            this.Contact.DataPropertyName = "Contact";
             this.Contact.HeaderText = "Contact";
             this.Contact.Name = "Contact";
             // 
