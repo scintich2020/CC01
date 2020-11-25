@@ -49,7 +49,12 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblText = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtText = new System.Windows.Forms.TextBox();
+            this.btnGenerate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtContact
@@ -58,7 +63,7 @@
             this.txtContact.Location = new System.Drawing.Point(327, 294);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(279, 29);
-            this.txtContact.TabIndex = 58;
+            this.txtContact.TabIndex = 6;
             // 
             // lblContact
             // 
@@ -73,7 +78,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(580, 46);
+            this.linkLabel1.Location = new System.Drawing.Point(531, 51);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(14, 13);
             this.linkLabel1.TabIndex = 56;
@@ -87,7 +92,7 @@
             this.btnCancel.Location = new System.Drawing.Point(519, 355);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(159, 79);
-            this.btnCancel.TabIndex = 55;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
@@ -98,7 +103,7 @@
             this.btnSave.Location = new System.Drawing.Point(327, 355);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(162, 79);
-            this.btnSave.TabIndex = 54;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
@@ -107,16 +112,16 @@
             // 
             this.lblPhoto.AutoSize = true;
             this.lblPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoto.Location = new System.Drawing.Point(372, 38);
+            this.lblPhoto.Location = new System.Drawing.Point(323, 43);
             this.lblPhoto.Name = "lblPhoto";
             this.lblPhoto.Size = new System.Drawing.Size(59, 24);
-            this.lblPhoto.TabIndex = 53;
+            this.lblPhoto.TabIndex = 7;
             this.lblPhoto.Text = "Photo";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(376, 65);
+            this.pictureBox1.Location = new System.Drawing.Point(327, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(218, 176);
             this.pictureBox1.TabIndex = 52;
@@ -130,7 +135,7 @@
             this.txtMatricule.Location = new System.Drawing.Point(12, 47);
             this.txtMatricule.Name = "txtMatricule";
             this.txtMatricule.Size = new System.Drawing.Size(279, 29);
-            this.txtMatricule.TabIndex = 51;
+            this.txtMatricule.TabIndex = 0;
             // 
             // lblMatricule
             // 
@@ -148,7 +153,7 @@
             this.txtNom.Location = new System.Drawing.Point(12, 118);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(279, 29);
-            this.txtNom.TabIndex = 49;
+            this.txtNom.TabIndex = 1;
             // 
             // lblNom
             // 
@@ -166,7 +171,7 @@
             this.txtPrenom.Location = new System.Drawing.Point(12, 190);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(279, 29);
-            this.txtPrenom.TabIndex = 47;
+            this.txtPrenom.TabIndex = 2;
             // 
             // lblPrenom
             // 
@@ -184,7 +189,7 @@
             this.txtDateNaisssance.Location = new System.Drawing.Point(12, 261);
             this.txtDateNaisssance.Name = "txtDateNaisssance";
             this.txtDateNaisssance.Size = new System.Drawing.Size(279, 29);
-            this.txtDateNaisssance.TabIndex = 45;
+            this.txtDateNaisssance.TabIndex = 3;
             // 
             // lblDateNaissance
             // 
@@ -202,7 +207,7 @@
             this.txtLieu.Location = new System.Drawing.Point(14, 339);
             this.txtLieu.Name = "txtLieu";
             this.txtLieu.Size = new System.Drawing.Size(279, 29);
-            this.txtLieu.TabIndex = 43;
+            this.txtLieu.TabIndex = 4;
             // 
             // lblLieu
             // 
@@ -220,7 +225,7 @@
             this.txtEmail.Location = new System.Drawing.Point(14, 411);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(279, 29);
-            this.txtEmail.TabIndex = 41;
+            this.txtEmail.TabIndex = 5;
             // 
             // lblEmail
             // 
@@ -236,13 +241,55 @@
             // 
             this.toolTip1.IsBalloon = true;
             // 
+            // lblText
+            // 
+            this.lblText.AutoSize = true;
+            this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblText.Location = new System.Drawing.Point(568, 226);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(43, 20);
+            this.lblText.TabIndex = 61;
+            this.lblText.Text = "Text:";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(617, 71);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(178, 143);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 60;
+            this.pictureBox2.TabStop = false;
+            // 
+            // txtText
+            // 
+            this.txtText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtText.Location = new System.Drawing.Point(617, 220);
+            this.txtText.Name = "txtText";
+            this.txtText.Size = new System.Drawing.Size(193, 26);
+            this.txtText.TabIndex = 59;
+            // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerate.Location = new System.Drawing.Point(730, 264);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(116, 36);
+            this.btnGenerate.TabIndex = 58;
+            this.btnGenerate.Text = "Generate";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            // 
             // FrmStudentEdit
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(684, 450);
+            this.ClientSize = new System.Drawing.Size(884, 450);
+            this.Controls.Add(this.lblText);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.txtText);
+            this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.txtContact);
             this.Controls.Add(this.lblContact);
             this.Controls.Add(this.linkLabel1);
@@ -266,6 +313,7 @@
             this.Text = "Student Edit";
             this.Load += new System.EventHandler(this.FrmStudentEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,5 +341,9 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lblText;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txtText;
+        private System.Windows.Forms.Button btnGenerate;
     }
 }

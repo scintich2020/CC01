@@ -267,6 +267,7 @@ namespace WindowsForms
                    MessageBoxIcon.Error
                );
             }
+            
         }
 
         private void btnCancel_Click_1(object sender, EventArgs e)
@@ -277,6 +278,14 @@ namespace WindowsForms
         private void FrmStudentEdit_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            QRCoder.QRCodeGenerator QG = new QRCoder.QRCodeGenerator();
+            var MyData = QG.CreateQrCode(txtText.Text, QRCoder.QRCodeGenerator.ECCLevel.H);
+            var code = new QRCoder.QRCode(MyData);
+            pictureBox1.Image = code.GetGraphic(50);
         }
     }
 }

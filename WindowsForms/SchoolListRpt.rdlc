@@ -49,7 +49,7 @@
               <Width>4.93417cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.93417cm</Width>
+              <Width>4.43146cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.94979cm</Width>
@@ -511,7 +511,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Count(Fields!contact.Value)</Value>
+                              <Value>=Count(Fields!Contact.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -561,9 +561,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>1.53141cm</Top>
-        <Left>0.31495cm</Left>
+        <Left>0.3175cm</Left>
         <Height>2.99062cm</Height>
-        <Width>19.74958cm</Width>
+        <Width>19.24687cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -575,7 +575,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>7.89942in</Width>
+  <Width>7.72334in</Width>
   <Page>
     <PageFooter>
       <Height>1.44349cm</Height>

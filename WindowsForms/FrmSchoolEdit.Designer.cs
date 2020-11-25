@@ -51,7 +51,7 @@
             this.lblLogo.Location = new System.Drawing.Point(331, 9);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(53, 24);
-            this.lblLogo.TabIndex = 35;
+            this.lblLogo.TabIndex = 4;
             this.lblLogo.Text = "Logo";
             this.lblLogo.Click += new System.EventHandler(this.lblLogo_Click);
             // 
@@ -70,7 +70,7 @@
             this.txtContact.Location = new System.Drawing.Point(25, 295);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(253, 29);
-            this.txtContact.TabIndex = 33;
+            this.txtContact.TabIndex = 3;
             // 
             // lblContact
             // 
@@ -88,7 +88,7 @@
             this.txtTel.Location = new System.Drawing.Point(25, 217);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(253, 29);
-            this.txtTel.TabIndex = 31;
+            this.txtTel.TabIndex = 2;
             // 
             // txtEmail
             // 
@@ -96,7 +96,7 @@
             this.txtEmail.Location = new System.Drawing.Point(25, 141);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(253, 29);
-            this.txtEmail.TabIndex = 30;
+            this.txtEmail.TabIndex = 1;
             // 
             // lblEmail
             // 
@@ -114,7 +114,7 @@
             this.txtNom.Location = new System.Drawing.Point(21, 56);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(257, 29);
-            this.txtNom.TabIndex = 28;
+            this.txtNom.TabIndex = 0;
             // 
             // lblTel
             // 
@@ -143,7 +143,7 @@
             this.btnCancel.Location = new System.Drawing.Point(473, 268);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(159, 56);
-            this.btnCancel.TabIndex = 38;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -154,7 +154,7 @@
             this.btnSave.Location = new System.Drawing.Point(305, 268);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(162, 56);
-            this.btnSave.TabIndex = 37;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
